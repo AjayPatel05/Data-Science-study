@@ -68,9 +68,9 @@ while A % B == 0:
 
 print(f"Number is divisible {count} times.")
 
-Number is divisible 2 times.
+The number is divisible 2 times.
 
-Q6. Create a list containing 25 int type data. Using for loop and if-else condition print if the element is divisible by 3 or not.
+Q6. Create a list containing 25 int-type data and using for loop and if-else condition print if the element is divisible by 3 or not.
 Ans-
 numbers = list(range(1, 26))
 for num in numbers:
@@ -90,51 +90,4 @@ Immutable Data Types: These are data types whose values cannot be changed after 
 my_tuple = (1, 2, 3)
 # my_tuple[0] = 100  
 # This will raise an error
-
-Which of the following data types in Python is mutable? int float tuple list
-ChatGPT said:
-ChatGPT
-Among the data types listed, list is mutable.
-•	int (integer) is immutable.
-•	float is immutable.
-•	tuple is immutable.
-•	list is mutable, meaning its elements can be changed after it is created.
-4o
-You said:
-Which of the following data types in Python is immutable? set dict list str
-ChatGPT said:
-ChatGPT
-Among the data types listed, str (string) is immutable.
-•	set is mutable.
-•	dict (dictionary) is mutable.
-•	list is mutable.
-•	str (string) is immutable, meaning once a string is created, it cannot be changed.
-4o
-You said:
-Which of the following operations can be performed on immutable objects? Appending new elements Removing elements Modifying elements None of the above
-ChatGPT said:
-ChatGPT
-The correct answer is None of the above.
-Immutable objects in Python cannot be changed after they are created, so you cannot perform operations like appending new elements, removing elements, or modifying elements on them. If you need to change an immutable object, you would have to create a new object with the desired modifications.
-4o
-You said:
-What happens when you assign a new value to an existing variable of an immutable data type? The existing object is modified with the new value. A new object is created with the new value and assigned to the variable. An error occurs as you cannot assign a new value to an existing variable of an immutable data type. None of the above.
-ChatGPT said:
-ChatGPT
-The correct answer is:
-A new object is created with the new value and assigned to the variable.
-When you assign a new value to an existing variable of an immutable data type (like a string, integer, or tuple), Python creates a new object with the new value and assigns it to the variable. The original object remains unchanged, and the variable now points to the new object.
-4o
-You said:
-Consider the following code: my_list = [1, 2, 3] new_list = my_list new_list.append(4) print(my_list) What will be the output of the above code? [1, 2, 3] [1, 2, 3, 4] [1, 2, 3, 3, 4] Error
-ChatGPT said:
-ChatGPT
-The correct answer is:
-[1, 2, 3, 4]
-Here's why:
-•	my_list = [1, 2, 3] creates a list [1, 2, 3] and assigns it to my_list.
-•	new_list = my_list does not create a new list; it simply makes new_list another reference to the same list object in memory as my_list.
-•	new_list.append(4) modifies the list in place, adding 4 to the existing list.
-•	Since both my_list and new_list refer to the same list, the change is reflected in both variables.
-Thus, print(my_list) will output [1, 2, 3, 4]
 
