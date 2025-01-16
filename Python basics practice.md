@@ -169,7 +169,7 @@ int
 c='z'
 type(c)
 str
-type(a+c)
+type(a+c) 
 ---------------------------------------------------------------------------
 TypeError                                 Traceback (most recent call last)
 Cell In[47], line 1
