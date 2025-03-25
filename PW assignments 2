@@ -1,1 +1,299 @@
+Assignment
+
+Data Science Masters 2.0
+
+Q1. How do you comment code in Python? What are the different types of comments?
+Comments in Python are identified with a hash symbol, #, and extend to the end of the line. Hash characters in a string are not considered comments, however. There are three ways to write a comment - as a separate line, beside the corresponding statement of code, or as a multi-line comment block.
+Python programming gets complicated, including comment lines in Python is a great way to improve code readability. It is always recommended to include documentation and notes in Python syntax to make the code more readable and understandable for other coders. This is a useful practice when more than one programmer works on the same project.
+Types of Comments in Python
+There are three major types of comments in Python, and each of them has a different syntax. Let’s learn about each of them in the following section.
+
+Single line Comments
+You must start a single-line comment in Python with a hashtag symbol (#) with no white spaces. These comments end at the end of the line.
+The syntax of a single-line comment is 
+# comments here
+If the comment exceeds a single line, place a hashtag # at the beginning of the next line and continue the comment.  
+Example - 
+#this is a single line comment
+print(“hello”)    
+#this function will print hello 
+
+
+Multiline Comments
+Unlike other programming languages that support multiline comments, such as Java and C, Python doesn’t have a specific feature to support multiline comments. However, that doesn’t imply that making multiline comments is completely impossible in Python. There are multiple ways to write multiline comments. Although these methods are not technically multiline comments.
+Example-
+#this is first comment
+#this is second comment
+The next way is to use string literals in Python but without assigning any variables. If we don’t assign a string literal to a variable, the interpreter ignores it. We can use it to write multiline comments and use either a single quote (‘’) or double quotes (“”).
+Example-
+'this is a string using as a comment'
+Docstring Comments
+Docstring, which is short for documentation string, is an in-built feature in Python used for associating documentation with functions, modules, objects, methods, and classes. It is a string literal with triple quotes and appears immediately after the function.
+Docstrings are written in the first line after defining a function, module, method, etc., using triple quotations.
+Example-
+""" This is a sample of docstring but
+we can also use it as a multilne comment"""
+
+Q2. What are variables in Python? How do you declare and assign values to variables?
+A variable in Python is a name that refers to a value stored in memory. Variables are used to store and manipulate data in a program.
+Python allows you to declare a variable by simply assigning a value to a name using the = (assignment operator). There is no need to specify the data type, as Python is dynamically typed.
+x = 10        
+# Integer variable
+name = "Alice"  
+# String variable
+price = 99.99   
+# Float variable
+is_valid = True 
+# Boolean variable
+Rules for Naming Variables in Python:
+Variable names must start with a letter (A-Z or a-z) or an underscore _.
+
+The rest of the name can contain letters, digits (0-9), or underscores.
+
+Variable names are case-sensitive (age and Age are different variables).
+
+Reserved keywords (like def, class, if, etc.) cannot be used as variable names.
+
+Valid Variable Names:
+my_var = 5
+_name = "Ajay"
+age1 = 25
+PI = 3.14159
+Invalid Variable Names (will cause an error):
+1st_number = 10   # Cannot start with a number
+my-variable = 20  # Cannot contain hyphens
+class = "Python"  # Cannot use reserved keywords
+Multiple Variable Assignments:
+a, b, c = 1, 2, 3   # Assigns 1 to a, 2 to b, and 3 to c
+x = y = z = 100     # Assigns 100 to x, y, and z
+
+Creating Variables- 
+Python has no command for declaring a variable.
+
+A variable is created the moment you first assign a value to it.
+x = 5
+y = "Ajay"
+print(x)
+print(y)
+
+5
+Ajay
+
+Casting- 
+If you want to specify the data type of a variable, this can be done with casting.
+x = str(3)    
+# x will be '3'
+y = int(3)    
+# y will be 3
+z = float(3)  
+# z will be 3.0
+
+Q3. How do you convert one data type to another in Python?
+In Python, you can convert one data type to another using type conversion (typecasting). There are two types of type conversion:
+
+1. Implicit Type Conversion (Automatic)
+Python automatically converts smaller data types to larger ones when needed.
+
+Example:
+x = 10   
+# Integer
+y = 3.5  
+# Float
+result = x + y  
+# x is automatically converted to float
+print(result)  
+# Output: 13.5
+print(type(result))  
+# Output: <class 'float'>
+
+Explicit Type Conversion (Manual)
+You use built-in functions to manually convert types.
+
+# Integer to float
+a = 5
+b = float(a)
+print(b, type(b))  
+# Output: 5.0 <class 'float'>
+
+# String to integer
+s = "123"
+num = int(s)
+print(num, type(num))  
+# Output: 123 <class 'int'>
+
+# List to tuple
+lst = [1, 2, 3]
+tpl = tuple(lst)
+print(tpl, type(tpl))  
+# Output: (1, 2, 3) <class 'tuple'>
+
+# Converting a string to a list
+txt = "hello"
+lst_txt = list(txt)
+print(lst_txt, type(lst_txt))  
+# Output: ['h', 'e', 'l', 'l', 'o'] <class 'list'>
+
+Q4. How do you write and execute a Python script from the command line?
+To write and execute a Python script from the command line, follow these steps:
+1. Write a Python Script
+Create a new Python file using a text editor or the terminal.
+
+Option 1: Using a Text Editor
+Open Notepad, VS Code, PyCharm, or any code editor.
+
+Write a simple script, e.g.:
+# hello.py
+print("Hello, World!")
+Save the file with a .py extension (e.g., hello.py).
+
+Option 2: Using the Terminal (Linux/macOS) or Command Prompt (Windows)
+Open the terminal or command prompt.
+
+Use a command-line editor like nano or vim (Linux/macOS):
+nano hello.py
+
+Type the script:
+print("Hello, World!")
+
+Save and exit (For nano: Press CTRL + X, then Y, then Enter).
+
+
+Execute the Python Script
+Once you have your Python script ready, you can execute it.
+
+Option 1: Run with Python
+Open the terminal or command prompt, navigate to the file’s directory using cd, and run:
+python hello.py
+
+Option 2: Run the Script Directly (Linux/macOS)
+Make the script executable:
+chmod +x hello.py
+
+Run it:
+
+sh
+Copy
+Edit
+./hello.py
+
+
+Running Python Code Interactively
+You can also execute Python code interactively in the terminal:
+
+python
+
+Then type Python commands directly:
+print("Hello, World!")
+
+Q5. Given a list my_list = [1, 2, 3, 4, 5], write the code to slice the list and obtain the sub-list [2, 3].
+You can use Python's list slicing to extract the sub-list [2, 3] from my_list:
+my_list = [1, 2, 3, 4, 5]
+sub_list = my_list[1:3] 
+# Slicing from index 1 to 2 (exclusive of index 3)
+print(sub_list)  
+# Output: [2, 3]
+
+Explanation
+my_list[1:3] means:
+
+Start at index 1 (which is 2).
+
+Stop at index 3 (excluding 3).
+
+So, it includes my_list[1] and my_list[2], resulting in [2, 3].
+Q6. What is a complex number in mathematics, and how is it represented in Python?
+A complex number is a number that has both a real part and an imaginary part. It is generally represented as:
+    z=a+bi
+where:
+• a is the real part.
+• b is the imaginary part.
+• i (or jjj in engineering) is the imaginary unit, where i2=−1i^2 = -1i2=−1.
+
+Complex Number Represented in Python - 
+In Python, complex numbers are represented using the complex data type, and the imaginary part is denoted using j.
+
+Creating a Complex Number
+z = 3 + 4j  
+# Complex number 3 + 4i
+print(z)  
+# Output: (3+4j)
+print(type(z))  
+# Output: <class 'complex'>
+
+Accessing Real and Imaginary Parts
+print(z.real) 
+# Output: 3.0
+print(z.imag) 
+# Output: 4.0
+
+
+Q7. What is the correct way to declare a variable named age and assign the value 25 to it?
+The correct way to declare a variable named age and assign the value 25 to it in Python is:
+age = 25
+Explanation:
+age is the variable name.
+
+= is the assignment operator.
+
+25 is the integer value assigned to the variable.
+
+Additional Notes:
+Variable names in Python must start with a letter or an underscore (_) and cannot start with a number.
+
+They cannot contain spaces or special characters (except _).
+
+Python is dynamically typed, so you don’t need to specify the data type explicitly.
+
+Checking the Variable Type
+If you want to verify the type of age, you can use:
+print(type(age))  
+# Output: <class 'int'>
+Q8. Declare a variable named price and assign the value 9.99 to it. What data type does this variable
+belong to?
+I can declare a variable named price and assign it the value 9.99 like this:
+price = 9.99
+ Data Type- 
+To check the data type of price, you can use the type() function:
+print(type(price))  
+# Output: <class 'float'>
+Since 9.99 is a decimal number, Python automatically assigns it the float (floating-point number) data type.
+Q9. Create a variable named name and assign your full name to it as a string. How would you print the
+value of this variable?
+You can create a variable named name and assign your full name to it as a string like this:
+name = "Ajay Patel"  
+# Replace with your actual full name
+Printing the Value of the Variable
+To print the value of name, use the print() function:
+print(name)
+Ajay Patel
+Q10. Given the string "Hello, World!", extract the substring "World".
+I can extract the substring "World" from the string "Hello, World!" using string slicing:
+text = "Hello, World!"
+substring = text[7:12]  
+# Extract characters from index 7 to 11 (excluding 12)
+print(substring)  
+# Output: World
+
+Explanation:
+Indexing in Python starts at 0:
+H  e  l  l  o  ,     W  o  r  l  d  !
+0  1  2  3  4  5  6  7  8  9 10 11 12
+
+"World" starts at index 7 and ends at 11.
+Slicing syntax: text[start:end] (end index is exclusive).
+Q11. Create a variable named "is_student" and assign it a boolean value indicating whether you are
+currently a student or not.
+You can create a variable named is_student and assign it a boolean value (True or False) based on whether you are currently a student.
+
+is_student = True  
+# Set to False if you are not a student
+
+Explanation:
+
+In Python, boolean values are represented as True or False (case-sensitive).
+
+You can check the type of the variable using:
+
+print(type(is_student))  # Output: <class 'bool'>
+
 
